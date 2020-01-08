@@ -1,0 +1,574 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    background: #fff;
+    font-family: Noto Sans TC, sans-serif;
+    height: 100%;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.wrap {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main {
+    padding: 0 40px;
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info h1 {
+    font-size: 30px;
+    margin: 20px;
+    font-weight: bold;
+    color: #173060;
+    text-align: center;
+}
+
+.color_top {
+    width: 1024px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.gray {
+    background-color: #B3ABA6;
+    width: 14%;
+}
+
+.orange {
+    background-color: #FF8F14;
+    width: 21%;
+}
+
+.blue {
+    background-color: #173060;
+    width: 9%;
+}
+
+.pink {
+    background-color: #F65453;
+    width: 22%;
+}
+
+.red {
+    background-color: #CC251B;
+    width: 18.55%;
+}
+
+.light_blue {
+    background-color: #62A1D2;
+    width: 14.55%;
+}
+
+.product {
+    border-radius: 10px;
+    border: 2px solid #62A1D2;
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.progress {
+    display: flex;
+    width: 650px;
+    align-items: center;
+}
+
+.circle.step0,
+.circle.step1,
+.circle.step2,
+.line.step0,
+.line.step1 {
+    background: #62A1D2;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    background: gray;
+    border-radius: 50%;
+}
+
+.line {
+    width: 340px;
+    height: 2px;
+    background: gray;
+    text-align: center;
+}
+
+.line span {
+    color: #B3ABA6;
+    font-size: 14px;
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.product:after {
+    content: '';
+    border-top: 10px solid #62A1D2;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+}
+
+.order_num {
+    font-size: 18px;
+    padding: 20px 0px 0px 20px;
+}
+
+.main_title {
+    color: #62A1D2;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.product-content {
+    padding: 20px 0;
+    border-bottom: 1px #b3aba6 solid;
+    display: flex;
+}
+
+.product_info {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin-left: 30px;
+}
+
+.order-item {
+    padding: 15px;
+}
+
+.product_detail p {
+    padding-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #B3ABA6;
+}
+
+button {
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+}
+
+.amount {
+    width: 140px;
+    height: 30px;
+    margin-left: 69px;
+    display: flex;
+    border-radius: 2px;
+    border: 1px solid #B3ABA6;
+    align-items: center;
+    justify-content: center;
+}
+
+.amount span {
+    width: 80px;
+    height: 28px;
+    text-align: center;
+    font-size: 12px;
+    display: flex;
+    line-height: 22px;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #B3ABA6;
+    border-right: 1px solid #B3ABA6;
+}
+
+.amount button {
+    height: 20px;
+    width: 20px;
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+}
+
+.minus {
+    background-image: url(../img/icon_less.svg);
+}
+
+.plus {
+    background-image: url(../img/icon_add.svg);
+}
+
+.price {
+    width: 91px;
+    height: 33px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: -20px;
+}
+
+.delete {
+    margin-left: 10px;
+}
+
+.delete img {
+    width: 30px;
+    height: 30px;
+}
+
+.total {
+    text-align: right;
+    color: #62A1D2;
+    font-size: 18px;
+    padding: 0px 22px 20px;
+}
+
+.total .total_price {
+    font-size: 24px;
+    padding-left: 80px;
+}
+
+.method {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list {
+    width: 290px;
+    height: 130px;
+    border-radius: 10px;
+    border: 2px solid #62A1D2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #62A1D2;
+    font-size: 16px;
+}
+
+.list.focus {
+    background: #173060;
+    border: 2px solid #173060;
+}
+
+.notice {
+    color: #B3ABA6;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 20px 0 30px 0;
+}
+
+.notice li {
+    list-style: disc;
+    margin-left: 16px;
+    font-size: 12px;
+}
+
+footer {
+    background: #173060;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 12px;
+}
+
+
+/* info  */
+
+.section-info {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px 0;
+    font-family: Noto Sans TC, sans-serif;
+}
+
+.main_notice {
+    margin-top: 44px;
+    background: #e8e7e6;
+    padding-bottom: 38px;
+    padding-top: 25px;
+    min-height: calc(100vh - 180px);
+}
+
+.pay_form {
+    width: 610px;
+    margin: 0 auto;
+}
+
+.pay_money {
+    background: #fff;
+    border-radius: 10px;
+}
+
+.info_total_price {
+    display: flex;
+    align-items: center;
+    color: #62A1D2;
+    font-size: 30px;
+}
+
+.info_total_price .txt {
+    color: #505050;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.card_style {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.card ul {
+    display: flex;
+    align-items: center;
+}
+
+.info_total_price .sum {
+    margin-left: 20px;
+}
+
+.section-input {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.input_group {
+    border-bottom: 1px solid #dcd6d3;
+    width: 100%;
+    padding: 14px 0;
+    display: flex;
+    align-items: center;
+}
+
+.input_group label {
+    color: #505050;
+    width: 118px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.input_group input {
+    height: 50px;
+    width: 280px;
+    border: 1px solid #B3ABA6;
+    border-radius: 5px 5px;
+    color: #505050;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Noto Sans TC, sans-serif;
+    padding: 13px 0 13px 15px;
+    outline: none;
+}
+
+.button_group {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.button_group button {
+    border-radius: 28px;
+    width: 180px;
+    background: #62A1D2;
+    padding: 11px;
+    color: #fff;
+    font-size: 16px;
+    margin-right: 35px;
+}
+
+.button_group .send {
+    background: #FF8F14;
+    margin: 0;
+}
+
+
+/*final  */
+
+.pay_final {
+    background: #fff;
+    max-width: 610px;
+    border-radius: 10px;
+    margin: 75px auto;
+    padding-bottom: 30px;
+}
+
+.pay_final h4 {
+    text-align: center;
+    color: #62A1D2;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 30px 0 15px;
+}
+
+.pay_final p {
+    color: #505050;
+    font-size: 18px;
+    padding-bottom: 25px;
+    text-align: center;
+}
