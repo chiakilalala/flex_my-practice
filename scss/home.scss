@@ -1,5 +1,5 @@
-$red:#ff0000;
-$white:#fff;
+$bg_color:#ff0000;
+$font_color:#fff;
 .header {
     background-size: cover;
     background-position: center center;
@@ -10,34 +10,32 @@ $white:#fff;
     }
     .menu-bg {
         min-height: 58px;
-        background: $red;
+        background: $bg_color;
         position: relative;
     }
     .menu {
         top: 0;
-        ul {
-            li {
-                color: $white;
-            }
-            a {
-                display: block;
-                &:hover {
-                    font-weight: bolder;
-                }
+        ul li {
+            color: $font_color;
+        }
+        a {
+            display: block;
+            &:hover {
+                font-weight: bolder;
             }
         }
     }
     .banner-title {
         max-width: 460px;
-        background: $red;
-        color: $white;
+        background: $bg_color;
+        color: $font_color;
     }
     .main-menu {
-        background: $red;
+        background: $bg_color;
         overflow: hidden;
         a {
             &:hover {
-                background: $red;
+                background: $bg_color;
             }
         }
     }

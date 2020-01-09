@@ -23,11 +23,11 @@
   color: #fff;
 }
 
-.header .menu ul a {
+.header .menu a {
   display: block;
 }
 
-.header .menu ul a:hover {
+.header .menu a:hover {
   font-weight: bolder;
 }
 
