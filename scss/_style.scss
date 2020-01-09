@@ -1,13 +1,6 @@
-$main_blue:#173060;
-$light_blue:#62A1D2;
-$main_gray:#B3ABA6;
-$orange:#FF8F14;
-$pink:#F65453;
-$red:#CC251B;
-$white:#fff;
-$text_color:#505050;
-a {
-    text-decoration: none;
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap');
+body {
+    font-family: $font_familyBase;
 }
 
 .wrap {
@@ -30,7 +23,7 @@ a {
         font-size: 30px;
         margin: 20px;
         font-weight: bold;
-        color: $main_blue;
+        color: $main_color;
         text-align: center;
     }
 }
@@ -48,33 +41,33 @@ a {
 }
 
 .orange {
-    background-color: $orange;
+    background-color: $bg_danger;
     width: 21%;
 }
 
 .blue {
-    background-color: $main_blue;
+    background-color: $main_color;
     width: 9%;
 }
 
 .pink {
-    background-color: $pink;
+    background-color: $bg_waring;
     width: 22%;
 }
 
 .red {
-    background-color: $red;
+    background-color: $bg_notice;
     width: 18.55%;
 }
 
 .light_blue {
-    background-color: $light_blue;
+    background-color: $sub_color;
     width: 14.55%;
 }
 
 .product {
     border-radius: 10px;
-    border: 2px solid $light_blue;
+    border: 2px solid $sub_color;
     display: block;
     width: 100%;
     margin-bottom: 40px;
@@ -87,17 +80,14 @@ a {
 }
 
 .circle {
-    &.step0,
-    &.step1,
-    &.step2 {
-        background: $light_blue;
+    &.active {
+        background: $sub_color;
     }
 }
 
 .line {
-    &.step0,
-    &.step1 {
-        background: $light_blue;
+    &.active {
+        background: $sub_color;
     }
 }
 
@@ -115,7 +105,7 @@ a {
     text-align: center;
     span {
         color: $main_gray;
-        font-size: 14px;
+        font-size: $main_font;
         padding-top: 10px;
         display: inline-block;
     }
@@ -123,7 +113,7 @@ a {
 
 .product:after {
     content: '';
-    border-top: 10px solid $light_blue;
+    border-top: 10px solid $sub_color;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     position: absolute;
@@ -137,41 +127,33 @@ a {
 }
 
 .main_title {
-    color: $light_blue;
-    font-size: 22px;
+    color: $sub_color;
+    font-size: $main_titleSize;
     font-weight: bold;
-    margin: 20px 0;
+    margin: 35px 0 15px;
     text-align: left;
 }
 
-.product-content {
-    padding: 20px 0;
-    border-bottom: 1px $main_gray solid;
-    display: flex;
-}
-
-.product_info {
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    margin-left: 30px;
-}
-
-.order-item {
+.order_item {
     padding: 15px;
+    li {
+        padding: 20px 0;
+        border-bottom: 1px $main_gray solid;
+        display: flex;
+    }
+    .product_info {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        margin-left: 30px;
+    }
 }
 
 .product_detail p {
     padding-top: 10px;
-    font-size: 14px;
+    font-size: $main_font;
     line-height: 1.5;
     color: $main_gray;
-}
-
-button {
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
 }
 
 .buy_info {
@@ -189,7 +171,7 @@ button {
     span {
         width: 80px;
         height: 30px;
-        font-size: 12px;
+        font-size: $sm_font;
         display: flex;
         line-height: 22px;
         align-items: center;
@@ -229,7 +211,7 @@ button {
 
 .total {
     text-align: right;
-    color: $light_blue;
+    color: $sub_color;
     font-size: 18px;
     padding: 0px 22px 20px;
     .total_price {
@@ -241,67 +223,58 @@ button {
 .method {
     display: flex;
     justify-content: space-between;
-}
-
-.list {
-    width: 290px;
-    height: 130px;
-    border-radius: 10px;
-    border: 2px solid $light_blue;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: $light_blue;
-    font-size: 16px;
-    &.focus {
-        background: $main_blue;
-        border: 2px solid $main_blue;
-    }
-    &:hover {
-        box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+    .list {
+        width: 290px;
+        height: 130px;
+        border-radius: 10px;
+        border: 2px solid $sub_color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        p {
+            color: $sub_color;
+            font-size: 16px;
+        }
+        &:hover {
+            box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+            background: $main_color;
+        }
+        &.focus {
+            background: $main_color;
+            border: 2px solid $main_color;
+        }
     }
 }
 
 .notice {
     color: $main_gray;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: $main_font;
+    line-height: $main_liheight;
     margin: 20px 0 30px 0;
     li {
         list-style: disc;
         margin-left: 16px;
-        font-size: 12px;
+        font-size: $sm_font;
     }
 }
 
 footer {
-    background: $main_blue;
+    background: $main_color;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $white;
-    font-size: 12px;
+    color: $bg_light;
+    font-size: $sm_font;
 }
 
 
-/* info  */
-
-.section-info {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $white;
-    border-radius: 10px;
-    margin: 20px 0;
-    font-family: Noto Sans TC, sans-serif;
-}
+/* info.html  */
 
 .main_notice {
     margin-top: 44px;
-    background: rgba(232, 231, 230, 0.8);
+    background: lighten($main_gray, 20%);
     padding-bottom: 38px;
     padding-top: 25px;
     min-height: calc(100vh - 180px);
@@ -310,30 +283,41 @@ footer {
 .pay_form {
     width: 610px;
     margin: 0 auto;
+    .section_info {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $bg_light;
+        border-radius: 10px;
+        margin: 20px 0;
+    }
+    .info_totalPrice {
+        display: flex;
+        align-items: center;
+        color: $sub_color;
+        font-size: 30px;
+        .txt {
+            color: $text_color;
+            font-size: $main_font;
+            line-height: $main_liheight;
+        }
+        .sum {
+            margin-left: 20px;
+        }
+    }
 }
 
 .pay_money {
-    background: $white;
+    background: $bg_light;
     border-radius: 10px;
-}
-
-.info_total_price {
-    display: flex;
-    align-items: center;
-    color: $light_blue;
-    font-size: 30px;
-    .txt {
-        color: $text_color;
-        font-size: 14px;
-        line-height: 20px;
-    }
 }
 
 .card_style {
     display: flex;
     align-items: center;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: $main_font;
+    line-height: $main_liheight;
 }
 
 .card ul {
@@ -341,18 +325,14 @@ footer {
     align-items: center;
 }
 
-.info_total_price .sum {
-    margin-left: 20px;
-}
-
-.section-input {
-    background: $white;
+.section_input {
+    background: $bg_light;
     border-radius: 10px;
     padding: 20px;
 }
 
 .input_group {
-    border-bottom: 1px solid rgba(220, 214, 211, .5);
+    border-bottom: 1px solid lighten($main_gray, 50%);
     width: 100%;
     padding: 14px 0;
     display: flex;
@@ -360,8 +340,8 @@ footer {
     label {
         color: $text_color;
         width: 118px;
-        font-size: 14px;
-        line-height: 20px;
+        font-size: $main_font;
+        line-height: $main_liheight;
     }
     input {
         height: 50px;
@@ -371,7 +351,6 @@ footer {
         color: $text_color;
         font-size: 16px;
         line-height: 24px;
-        font-family: Noto Sans TC, sans-serif;
         padding: 13px 0 13px 15px;
         outline: none;
         &.vaild-icon {
@@ -388,9 +367,9 @@ footer {
     button {
         border-radius: 28px;
         width: 180px;
-        background: $light_blue;
+        background: $sub_color;
         padding: 11px;
-        color: $white;
+        color: $bg_light;
         font-size: 16px;
         margin-right: 35px;
         transition: all .3s;
@@ -399,7 +378,7 @@ footer {
         }
     }
     .send {
-        background: $orange;
+        background: $bg_danger;
         margin: 0;
     }
 }
@@ -408,14 +387,14 @@ footer {
 /*final  */
 
 .pay_final {
-    background: $white;
+    background: $bg_light;
     max-width: 610px;
     border-radius: 10px;
     margin: 75px auto;
     padding-bottom: 30px;
     h4 {
         text-align: center;
-        color: $light_blue;
+        color: $sub_color;
         font-size: 22px;
         font-weight: bold;
         padding: 30px 0 15px;

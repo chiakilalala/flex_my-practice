@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/all.css">
-    <title>Document</title>
+    <title>付款方式</title>
 </head>
 
 <body>
@@ -22,11 +22,11 @@
             </div>
             <h1 class>訂單資訊</h1>
             <div class="progress">
-                <div class="circle step0"></div>
-                <div class="line step0">
+                <div class="circle active"></div>
+                <div class="line active">
                     <span>Step1 選定支付方式</span>
                 </div>
-                <div class="circle step1"></div>
+                <div class="circle active"></div>
                 <div class="line ">
                     <span>Step2 輸入信用卡資訊或取得支付代碼</span>
                 </div>
@@ -56,12 +56,12 @@
         </div>
         <div class="main_notice">
             <div class="pay_form">
-                <div class="section-info">
-                    <div class="info_total_price">
+                <div class="section_info">
+                    <div class="info_totalPrice">
                         <div class="txt"> 應付金額</div>
-                        <div class="sum">
-                            $2,000
-                        </div>
+                        <div class="sum"> $2,000</div>
+
+
                     </div>
 
 
@@ -77,33 +77,34 @@
                     </div>
                 </div>
 
-                <div class="section-input">
+                <div class="section_input">
                     <div class="input_group">
-                        <label for="">信用卡卡號</label>
-                        <input type="text" class="" value="">
+                        <label for="card_num">信用卡卡號</label>
+                        <input id="card_num" type="text" class="" value="">
 
                     </div>
 
 
                     <div class="input_group">
-                        <label for="">持卡人英文姓名</label>
-                        <input type="text" class="" value="">
-
-                    </div>
-                    <div class="input_group">
-                        <label for="">有效年月</label>
-                        <input type="text" class="vaild-icon" value="">
-
-                    </div>
-                    <div class="input_group">
-                        <label for="">安全驗證碼</label>
-                        <input type="text" class="vaild-icon" value="">
+                        <label for="card_name">持卡人英文姓名</label>
+                        <input id="card_name" type="text" class="" value="">
 
                     </div>
 
                     <div class="input_group">
-                        <label for="">手機號碼</label>
-                        <input type="text" class="" value="">
+                        <label for="effective_date">有效年月</label>
+                        <input id="effective_date" type="text" class="vaild-icon" value="">
+
+                    </div>
+                    <div class="input_group">
+                        <label for="security_num">安全驗證碼</label>
+                        <input id="security_num" type="text" class="vaild-icon" value="">
+
+                    </div>
+
+                    <div class="input_group">
+                        <label for="phone_num">手機號碼</label>
+                        <input id="phone_num" type="text" class="" value="">
 
                     </div>
 

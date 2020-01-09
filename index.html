@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/all.css">
-    <title>Document</title>
+    <title>訂單資訊</title>
 </head>
 
 <body>
@@ -23,7 +23,7 @@
             <h1 class>訂單資訊</h1>
             <div class="progress">
 
-                <div class="circle step0"></div>
+                <div class="circle active"></div>
                 <div class="line">
                     <span>Step1 選定支付方式</span>
                 </div>
@@ -41,8 +41,8 @@
             <p class="main_title">確認訂單金額</p>
             <div class="product">
                 <h4 class="order_num"> 訂單編號：201907310111</h4>
-                <ul class="order-item">
-                    <li class="product-content">
+                <ul class="order_item">
+                    <li class="">
                         <img src="img/product_001.png" alt="">
                         <div class="product_info">
 
@@ -61,7 +61,7 @@
                             <div class="delete"><img src="img/delete.svg" alt=""></div>
                         </div>
                     </li>
-                    <li class="product-content">
+                    <li class="">
                         <img src="img/product_002.png" alt="">
                         <div class="product_info">
 
@@ -90,14 +90,15 @@
             </div>
             <p class="main_title">選擇付款方式</p>
             <ul class="method">
-                <a href="info.html" class="">
-                    <li class="list">
+
+                <li class="list">
+                    <a href="info.html" class="">
                         <img src="img/icon_PayByCard.svg" alt="">
                         <p>使用信用卡付款</p>
-                    </li>
-                </a>
-                <li class="list">
+                    </a>
+                </li>
 
+                <li class="list">
                     <img src="img/icon_PayByATM.svg" alt="">
                     <p>使用WebATM付款</p>
                 </li>

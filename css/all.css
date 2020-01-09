@@ -1,7 +1,11 @@
+@charset "UTF-8";
+/* color*/
+/*font*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap");
 html,
 body,
 div,
@@ -156,6 +160,16 @@ a {
   text-decoration: none;
 }
 
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+body {
+  font-family: “ "Noto Sans TC", sans-serif”;
+}
+
 .wrap {
   width: 100%;
   margin: 0 auto;
@@ -250,11 +264,11 @@ a {
           align-items: center;
 }
 
-.circle.step0, .circle.step1, .circle.step2 {
+.circle.active {
   background: #62A1D2;
 }
 
-.line.step0, .line.step1 {
+.line.active {
   background: #62A1D2;
 }
 
@@ -298,11 +312,15 @@ a {
   color: #62A1D2;
   font-size: 22px;
   font-weight: bold;
-  margin: 20px 0;
+  margin: 35px 0 15px;
   text-align: left;
 }
 
-.product-content {
+.order_item {
+  padding: 15px;
+}
+
+.order_item li {
   padding: 20px 0;
   border-bottom: 1px #B3ABA6 solid;
   display: -webkit-box;
@@ -310,7 +328,7 @@ a {
   display: flex;
 }
 
-.product_info {
+.order_item .product_info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,21 +340,11 @@ a {
   margin-left: 30px;
 }
 
-.order-item {
-  padding: 15px;
-}
-
 .product_detail p {
   padding-top: 10px;
   font-size: 14px;
   line-height: 1.5;
   color: #B3ABA6;
-}
-
-button {
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
 }
 
 .buy_info {
@@ -428,7 +436,7 @@ button {
           justify-content: space-between;
 }
 
-.list {
+.method .list {
   width: 290px;
   height: 130px;
   border-radius: 10px;
@@ -446,18 +454,22 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.method .list p {
   color: #62A1D2;
   font-size: 16px;
 }
 
-.list.focus {
-  background: #173060;
-  border: 2px solid #173060;
-}
-
-.list:hover {
+.method .list:hover {
   -webkit-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+  background: #173060;
+}
+
+.method .list.focus {
+  background: #173060;
+  border: 2px solid #173060;
 }
 
 .notice {
@@ -489,8 +501,21 @@ footer {
   font-size: 12px;
 }
 
-/* info  */
-.section-info {
+/* info.html  */
+.main_notice {
+  margin-top: 44px;
+  background: #e2dfdd;
+  padding-bottom: 38px;
+  padding-top: 25px;
+  min-height: calc(100vh - 180px);
+}
+
+.pay_form {
+  width: 610px;
+  margin: 0 auto;
+}
+
+.pay_form .section_info {
   padding: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -504,28 +529,9 @@ footer {
   background-color: #fff;
   border-radius: 10px;
   margin: 20px 0;
-  font-family: Noto Sans TC, sans-serif;
 }
 
-.main_notice {
-  margin-top: 44px;
-  background: rgba(232, 231, 230, 0.8);
-  padding-bottom: 38px;
-  padding-top: 25px;
-  min-height: calc(100vh - 180px);
-}
-
-.pay_form {
-  width: 610px;
-  margin: 0 auto;
-}
-
-.pay_money {
-  background: #fff;
-  border-radius: 10px;
-}
-
-.info_total_price {
+.pay_form .info_totalPrice {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -536,10 +542,19 @@ footer {
   font-size: 30px;
 }
 
-.info_total_price .txt {
+.pay_form .info_totalPrice .txt {
   color: #505050;
   font-size: 14px;
   line-height: 20px;
+}
+
+.pay_form .info_totalPrice .sum {
+  margin-left: 20px;
+}
+
+.pay_money {
+  background: #fff;
+  border-radius: 10px;
 }
 
 .card_style {
@@ -562,18 +577,14 @@ footer {
           align-items: center;
 }
 
-.info_total_price .sum {
-  margin-left: 20px;
-}
-
-.section-input {
+.section_input {
   background: #fff;
   border-radius: 10px;
   padding: 20px;
 }
 
 .input_group {
-  border-bottom: 1px solid rgba(220, 214, 211, 0.5);
+  border-bottom: 1px solid white;
   width: 100%;
   padding: 14px 0;
   display: -webkit-box;
@@ -599,7 +610,6 @@ footer {
   color: #505050;
   font-size: 16px;
   line-height: 24px;
-  font-family: Noto Sans TC, sans-serif;
   padding: 13px 0 13px 15px;
   outline: none;
 }
